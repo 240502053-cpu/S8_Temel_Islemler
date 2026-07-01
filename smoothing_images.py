@@ -5,10 +5,10 @@ img_filter = cv2.imread("filter.jpg")
 img_median = cv2.imread("median.jpg")
 img_bilateral = cv2.imread("bilateral.jpg")
 
-blur = cv2.blur(img_filter, (5, 5))  # Ortalama (Box) Blur
-blur_g = cv2.GaussianBlur(img_filter, (5, 5), cv2.BORDER_DEFAULT)  # Gaussian Blur
-blur_m = cv2.medianBlur(img_median, 5)  # Median Blur
-blur_b = cv2.bilateralFilter(img_bilateral, 9, 95, 95)  # Bilateral Filter
+blur = cv2.blur(img_filter, (5, 5))  
+blur_g = cv2.GaussianBlur(img_filter, (5, 5), cv2.BORDER_DEFAULT) 
+blur_m = cv2.medianBlur(img_median, 5) 
+blur_b = cv2.bilateralFilter(img_bilateral, 9, 95, 95)  
 
 cv2.imshow("Original Bilateral", img_bilateral)
 cv2.imshow("Box Blur", blur)
